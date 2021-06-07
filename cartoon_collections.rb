@@ -1,16 +1,28 @@
-def roll_call_dwarves# code an argument here
-  # Your code here
+require 'pry'
+
+
+def roll_call_dwarves(dwarves)
+  dwarves.each_with_index { | dwarf, index | puts "#{index + 1}. #{dwarf}" }
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+# planeteer_calls = ["earth", "wind", "fire", "water", "heart"] 
+
+def summon_captain_planet(planeteer_calls)
+  planeteer_calls.map { | planeteer | planeteer.capitalize + '!' }
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+# assorted_words = ["two", "go", "industrious", "bop"]
+
+def long_planeteer_calls(assorted_words)
+  assorted_words.any? {|word| word.length> 4 }
+end
+# snacks = %w[umbrella spinach cheddar helicopter]
+def find_the_cheese(snacks)
+  cheese_types = %w[gouda cheddar camembert]
+ snacks.find do |word| 
+  cheese_types.include?(word)
+  
+ end
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
-  cheese_types = ["cheddar", "gouda", "camembert"]
-end
+# binding.pry
